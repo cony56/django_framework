@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Comment
 # Register your models here.
 
 # admin page 출력되는 내용을 customize
@@ -12,3 +12,4 @@ class PostAdmin(admin.ModelAdmin):
     count_text.short_description = '글내용 글자수'
 
 admin.site.register(Post, PostAdmin)
+admin.site.register(Comment)
